@@ -476,7 +476,6 @@ img{
 .sidebar{
 	margin: 0 25px;
 	width: 220px;
-	height: 750px;
 	float: left;
 }
 
@@ -530,15 +529,37 @@ img{
   cursor: pointer;
 }
 
-.searchButton img{
-	padding-top: 4px;
+/*cart頁-收尋框加上放大鏡*/
+#magnifying-glass{
+  font-size: 2em; /* This controls the size. */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border: 0.1em solid #FFFF;
+  position: relative;
+  border-radius: 0.35em;
+}
+#magnifying-glass::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -0.25em;
+  bottom: -0.1em;
+  border-width: 0;
+  background: #FFFF;
+  width: 0.35em;
+  height: 0.08em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 
-
+/*cart頁-菜單區*/
 .menu{
 	float: left;
 	width: 730px;
-	margin: 0 10px;
+	margin: 15px 10px;
 }
 
 .menu ul{
@@ -550,6 +571,140 @@ img{
 	width: 220px;
 	height: 280px;
 	margin: 15px 10px;
-	border: 1px solid black ;					
+	-webkit-box-shadow: 5px 5px 5px gray; /*Chrome*/
+    -ms-box-shadow: 5px 5px 5px gray;　　/*IE9*/
+    box-shadow: 5px 5px 5px gray;
+    position: relative;					
 }
 
+.menu h3{
+	padding: 15px 0;
+	font-size: 20px;
+	text-align: center;
+}
+
+.menu span{
+	font-size: 12px;
+}
+
+.menu p{
+	font-size: 24px;
+	font-weight: bold;
+	padding: 15px 0;
+}
+
+/*cart頁-菜單區中間線*/
+.menu-line{
+	width: 91px;
+	border: 1px solid black;
+	margin: 15px 65px;
+}
+/*cart頁-菜單區加入購物車按鈕*/
+.menu li input{
+	margin: 0 10px;
+	width: 200px;
+	height: 28px;
+	background-color: #EFE9E7;
+	border: 2px solid #3D1101;
+	color: #3D1101;
+	border-radius: 2px;
+}
+
+.menu li input:hover{
+	border: 2px solid  #F56C23;
+	color: #F56C23;
+}
+
+/*cart頁-菜單區加入ribbon*/
+
+.ribbon-wrapper-green {
+  	width: 85px;
+  	height: 88px;
+  	overflow: hidden;
+  	position: absolute;
+  	top: -3px;
+ 	right: -3px;
+ 	z-index: 8;
+}
+
+.ribbon-green {
+  	text-align: center;
+  	text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  	-webkit-transform: rotate(45deg);
+  	-moz-transform:    rotate(45deg);
+  	-ms-transform:     rotate(45deg);
+  	-o-transform:      rotate(45deg);
+ 	 position: relative;
+  	padding: 7px 0;
+  	left: -5px;
+  	top: 15px;
+  	width: 120px;
+  	background-color: #00CC99 ;
+  	color: #FFFF;
+ 	 -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  	-moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  	box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  	content: "";
+  	border-top:   3px solid #00CC99;   
+  	border-left:  2px solid transparent;
+  	border-right: 2px solid transparent;
+  	position:absolute;
+ 	bottom: -3px;
+}
+
+.ribbon-green:before {
+  	left: 0;
+}
+.ribbon-green:after {
+  	right: 0;
+}
+
+/*cart頁-菜單區加入愛心*/
+
+.menu li{
+	position: relative;
+}
+#heart {
+	position: absolute;
+	top: 5px;
+	z-index: 9;
+}
+#heart:before,
+#heart:after {
+	position: absolute;
+    content: "";
+    left: 18px;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    background: #FFFF;
+    border-color: #FFFF;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 45px 45px 0 0 ;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+#heart:after {
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin :100% 100%;
+	}
