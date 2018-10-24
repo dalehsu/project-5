@@ -1,0 +1,555 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*css reset end*/
+
+/*全域設定-width:960px*/
+
+
+a{
+	text-decoration: none;
+}
+
+img{
+    max-width: 100%
+}
+
+
+.wrap{
+	max-width: 1024px;
+	margin: 0 auto;
+	font-family:  "MicrosoftJhengHeiRegular","微軟正黑體","Arial";
+	background-color: #EFE9E7;
+	color: #3D1101;
+}
+
+.clear{
+	clear: both;
+}
+
+.content{
+	margin: 25px 0;
+}
+
+.footer{
+	padding-top: 25px;
+}
+
+/*共同項目-表頭設定*/
+
+.header{
+	background-image: url(../images/header_desktop.png);
+	height: 420px;
+	position: relative;
+
+}
+
+.logo{
+	background: rgba(0,0,0,0.75);
+	height: 56px;
+}
+
+.logo h1{
+	float: left;
+	margin: 16px 0 16px 42px;
+}
+
+.logo h1 a{
+	background-image: url(../images/logo_w.svg);
+	width: 120px;
+	height: 24px;
+	display: block;
+	text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+}
+
+.logo ul{
+	float: right;
+	margin: 16px 48px;
+}
+
+.logo li{
+	float: left;
+	padding-left: 30px;
+}
+
+.logo li a{
+	color: #FFFFFF;
+}
+
+.banner{
+	width: 460px;
+	height: 152px;
+	background: rgba(0,0,0,0.35);
+	position: absolute;
+	top: 123px;
+	left: 295px;
+	color: #EFE9E7;
+}
+
+.banner h2{
+	font-size: 36px;
+	text-align: center;
+	padding: 20px 42px 16px 22px;
+}
+.banner p{
+	text-align: center;
+	padding: 0 134px 26px 134px;
+	line-height: 25px;
+}
+
+/*共同項目-表尾設定*/
+
+.about-hex{
+	width: 250px;
+	float: left;
+	margin: 0 45px;
+}
+
+.about-hex h3{
+	font-size: 24px;
+	padding-bottom: 16px;
+}
+
+.contact-hex{
+	width: 250px;
+	float: left;
+}
+
+.contact-hex ul{
+	list-style: disc;
+	margin: 0 20px;
+}
+
+.contact-hex h3{
+	font-size: 24px;
+	padding-bottom: 16px;
+}
+
+.hex-link{
+	width: 300px;
+	float: right;
+}
+.hex-link ul{
+	text-align: right;
+	margin: 22px 55px;
+}
+.hex-link li{
+	display: inline-block;
+	padding: 5px;
+}
+
+/*index頁-gototop按鈕*/
+
+.backtotop input{
+	width: 50px;
+	height: 45px;
+	background-color: #EFE9E7;
+	border-radius: 3px;
+	border: 1px solid #EFE9E7;
+	color: #3D1101;
+	position: fixed;
+	right: 0;
+	bottom: 0;  
+}
+
+/*index-關於好吃的秘訣*/
+
+.feature{
+	float: left;
+	margin: 0 20px;
+	position: relative;
+}
+
+.feature li{
+	float: left;
+	width: 260px;
+	height: 350px;
+	margin: 0 30px;
+}
+
+.feature h3{
+	text-align: center;
+}
+.feature img{
+	margin: 0 25px;
+}
+
+/*index-分隔線CODE*/
+.line{
+	width: 461px;
+	margin: 50px 282px 60px 281px;
+	border: 1px solid #979797;
+}
+
+.feature-about{
+	background-color: #EFE9E7 ;
+	width: 200px;
+	position: absolute;
+	top: 20px;
+	left: 390px;
+	padding: 0 15px;
+}
+
+.feature-about h3{
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: bold;
+
+}
+
+.feature-info h3{
+	font-size: 18px;
+	margin: 20px 0;
+}
+.feature-info p{
+	text-align: justify; /*chrome*/
+	text-justify: distribute; /*firefox,ie,edge */
+}
+
+/*index-關於廚師*/
+
+.aboutchef{
+	margin: 50px 0;
+	background-color: #3D1101;
+	height: 460px;
+	position: relative;
+}
+.aboutchef img{
+	margin: 0 42px;
+}
+
+.aboutchef-info{
+	width: 400px;
+	position: absolute;
+	top: 85px;
+	left: 550px;
+	color: #EFE9E7;
+}
+
+.aboutchef-info h3{
+	font-size: 20px;
+
+}
+
+.aboutchef-info span{
+	font-size: 16px;
+	line-height: 32px;
+}
+
+.aboutchef-info p{
+	margin: 16px 0;
+	line-height: 20px;
+}
+
+/*index-客戶意見回饋*/
+
+.comment h3{
+	text-align: center;
+	font-size: 24px;
+	padding-bottom: 51px;
+	font-weight: bold;
+}
+.comment ul{
+	margin: 0 30px;
+}
+.comment li{
+	width: 310px;
+	float: left;
+	display: inline-block;
+}
+
+.comment li img{
+	float: left;
+	margin: 0 15px;
+	padding-bottom: 70px;
+}
+
+.comment li h4{
+	font-size: 18px;
+	margin: 24px 5px;
+}
+
+.comment span{
+	float: right;
+	padding: 16px 0;
+}
+
+/*index主頁-訂位表單*/
+
+.booking{
+	margin: 50px 0;
+	background-color: #FAFAFA ;
+}
+
+.booking img{
+	float: left;
+	margin: 0 35px;
+}
+
+.booking h3{
+	text-align: center;
+	font-size: 24px;
+	padding: 34px 0;
+	line-height: 35px;
+	font-weight: bold;
+}
+
+.booking label{
+	display: block;
+	padding: 10px 0 5px 0;
+	font-family: PingFangTC-Light;
+}
+
+.booking input{
+	width: 450px;
+	height: 32px;
+	margin-bottom: 5px;
+	padding: 0 10px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	font-family: PingFangTC-Light;
+}
+
+/*index主頁-訂位表單(單選樣式)*/
+.setup {
+	display: inline-block;
+}
+
+.setup span{
+	float: left;
+	margin: 13px 0;
+}
+
+.setup input{
+	float: left;
+	width: 20px;
+	height: 45px;
+	margin: 0 15px;
+}
+
+
+/*index主頁-訂位表單(按鈕樣式)*/
+.btn input{
+	width: 80px;
+	height: 35px;
+	margin: 0 10px 56px 10px;
+	background-color: #A9A9A9;
+	float: right;
+	color: #FFFFFF;
+	border: 1px solid #A9A9A9;
+}
+
+.btn input:hover{
+	background-color: #F56C23;
+	border: 1px solid #F56C23;
+}
+
+/*LOGIN頁-登入表單*/
+
+.form-login{
+	width: 320px;
+	margin: 20px auto;
+}
+
+.form-login h2{
+	font-size: 48px;
+	line-height: 25px;
+	text-align: center;
+	padding-top: 50px;
+	font-weight: bold;
+}
+
+.form-login span{
+	font-size: 20px;
+}
+
+.form-login h3{
+	text-align: center;
+	font-weight: bolder;
+
+}
+
+.form-login form{
+	border-top: 3px solid #FF5E45;
+	border-radius: 5px;
+	margin: 20px 0;
+	padding: 0 10px;
+	-webkit-box-shadow: 5px 5px 5px gray; /*Chrome*/
+    -ms-box-shadow: 5px 5px 5px gray;　　/*IE9*/
+    box-shadow: 5px 5px 5px gray;
+}
+
+.form-login input{
+	width: 100%;
+}
+
+.form-login >form span{
+	font-size: 14px;
+	color: #FF5E45;
+	display: block;
+}
+
+.form-login .pure-form-stacked label{
+	margin: 1em 0;
+}
+
+/*LOGIN頁-login-btn按鈕+hover特效*/
+.form-login .login-btn{
+	width: 125px;
+	height: 32px;
+	margin: 25px 10px 10px 10px;
+	background-color: #A9A9A9;
+	border: 1px solid #A9A9A9; 
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+
+.form-login .login-btn:hover{
+	background-color: #F56C23;
+	border: 1px solid #F56C23;
+}
+
+
+/*LOGIN頁-input插入圖片*/
+#email{
+	background-image: url(../images/mail.png);
+	background-position: 3% 50%;
+	background-repeat: no-repeat;
+}
+#password{
+	background-image: url(../images/lock.png);
+	background-position: 3% 50%;
+	background-repeat: no-repeat;
+}
+
+/*cart頁左側欄選單*/
+
+.sidebar{
+	margin: 0 25px;
+	width: 220px;
+	height: 750px;
+	float: left;
+}
+
+.sidebar h3{
+	font-size: 20px;
+	padding: 0 0 20px 5px;
+}
+
+.sidebar li{
+	padding: 10px 0;
+	border-bottom: 1px solid #3D1101; 
+}
+
+.sidebar a{
+	color: #3D1101; 
+}
+
+.sidebar a:hover {
+	color: #FFFF; 
+}
+
+.sidebar li:hover {
+	background-color: #3D1101;
+}
+
+/*cart頁-收尋框*/
+
+.search {
+  position: relative;
+  float: left;
+  margin: 0 20px;
+}
+
+.searchTerm {
+  float: left;
+  width: 460px;
+  border: 2px solid #3D1101;
+  padding: 5px;
+  height: 20px;
+
+}
+.searchButton {
+  position: absolute;  
+  right: -10px;
+  width: 40px;
+  height: 34px;
+  border: 1px solid #3D1101;
+  background: #3D1101;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.searchButton img{
+	padding-top: 4px;
+}
+
+
+.menu{
+	float: left;
+	width: 730px;
+	margin: 0 10px;
+}
+
+.menu ul{
+	margin: 26px 0;
+}
+
+.menu li{
+	float: left;
+	width: 220px;
+	height: 280px;
+	margin: 15px 10px;
+	border: 1px solid black ;					
+}
+
