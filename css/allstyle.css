@@ -102,23 +102,26 @@ input{
 .aside{
 	width: 320px;
 	position: absolute;
-	top: 65px;
-	background-color: #FFFF;
+	top: 55px;
+	background: rgba(0,0,0,0.9);
 	z-index: 9;	
 	display: none;
 }
 
 .aside li{
-	border-bottom: 1px solid #3D1101;
-	padding: 10px 25px;
-	text-align: right;
+	border-bottom: 1px solid #ffff;
+	padding: 20px 25px;
+	text-align: center;
 }
 
 .aside a{
-	color: #3D1101;
+	color: #ffff;
 }	
 
 @media (max-width: 376px) {
+	.logo{
+		flex: left;
+	}
 	.burger{
 		display: block;
 	}
@@ -152,7 +155,9 @@ input{
 		display: block;
 		width: 100%;
 	}
-
+	.aside li{
+		padding: 6% 2%;
+	}
 }
 
 /*共同項目-表頭設定*/
@@ -318,6 +323,22 @@ input{
 	}
 }
 
+@media (max-width: 376px) {
+	.about-hex{
+		max-width: 100%;
+		margin: 5% 15%;
+	}
+	.contact-hex{
+		max-width: 100%;
+		margin: 5% 15%;
+	}
+	.hex-link{
+		margin: 2% 0;
+		float: right;
+	}
+}
+
+
 /*index頁-gototop按鈕*/
 
 .backtotop input{
@@ -330,6 +351,12 @@ input{
 	position: fixed;
 	right: 0;
 	bottom: 0;  
+}
+
+@media (max-width: 376px) {
+	.backtotop input{
+		display: none;
+	}
 }
 
 /*index-關於好吃的秘訣*/
@@ -420,8 +447,8 @@ input{
 
 @media (max-width: 376px) {
 	.feature-about{
-		top: -7%;
-		left: 15%;
+		top: -10%;
+		left: 17%;
 	}
 }
 
@@ -446,7 +473,7 @@ input{
 
 @media (max-width: 376px) {
 	.feature-info {
-		margin: 50% 10%;
+		margin: 40% 15% 10% 15%;
 	}
 	.feature-info h3{
 		margin: 5%;
@@ -511,6 +538,18 @@ input{
 	}
 }
 
+@media (max-width: 376px) {
+	.aboutchef img{
+		margin: 0 auto;
+	}
+	.aboutchef-info{
+		max-width: 80%;
+		background-color: #3D1101;
+		height: auto;
+		padding: 5% 10%;
+	}
+}
+
 /*index-客戶意見回饋*/
 
 .comment h3{
@@ -550,6 +589,15 @@ input{
 	}
 	.comment li img{
 		padding-bottom: 50%;
+	}
+}
+
+@media (max-width: 376px) {
+	.comment h3{
+		margin: 5% 0;
+	}
+	.comment li{
+		max-width: 100%;
 	}
 }
 
@@ -609,6 +657,20 @@ input{
 	}
 }
 
+@media (max-width: 376px) {
+	.booking img{
+		max-width: 100%;
+		margin: 5% auto;
+	}
+	.booking label{
+		margin: 2%;
+	}
+	.booking input{
+		margin: 0 3%;
+		width: 90%;
+	}
+}
+
 /*index主頁-訂位表單(單選樣式)*/
 .setup {
 	display: inline-block;
@@ -631,6 +693,17 @@ input{
 		margin: 10% 0;
 	}
 }
+
+@media (max-width: 376px) {
+	.setup span{
+		padding-top: 10%;
+		padding-left: 15%;
+	}
+	.setup input{
+		margin: 0 auto;
+	}
+}
+
 
 /*index主頁-訂位表單(按鈕樣式)*/
 .btn input{
