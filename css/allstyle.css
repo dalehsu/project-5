@@ -56,11 +56,6 @@ a{
 	text-decoration: none;
 }
 
-img{
-    max-width: 100%
-}
-
-
 .wrap{
 	max-width: 1024px;
 	margin: 0 auto;
@@ -81,13 +76,103 @@ img{
 	padding-top: 25px;
 }
 
+a{
+	cursor: pointer;
+}
+
+input{
+	cursor: pointer;
+}
+
+/*漢堡選單樣式*/
+.burger {
+  width: 33px;
+  margin: 15px 25px;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+
+.burger-top,.burger-bottom,.burger-middle {
+  height: 4px;
+  background: #fff;
+  margin-bottom: 6px;
+}
+
+.aside{
+	width: 320px;
+	position: absolute;
+	top: 65px;
+	background-color: #FFFF;
+	z-index: 9;	
+	display: none;
+}
+
+.aside li{
+	border-bottom: 1px solid #3D1101;
+	padding: 10px 25px;
+	text-align: right;
+}
+
+.aside a{
+	color: #3D1101;
+}	
+
+@media (max-width: 320px) {
+	.burger{
+		display: block;
+	}
+	/*漢堡選單-觸發*/
+	.open .burger-top{
+		-webkit-transform: rotate(45deg);/* Safari 和 Chrome */
+ 		-moz-transform: rotate(45deg); /* Firefox */
+ 		-ms-transform: rotate(45deg);/* Internet Explorer */
+		-o-transform: rotate(45deg); /* Opera */
+		transform: rotate(45deg);
+		margin-top: 10px;
+	}
+
+	.open .burger-middle{
+		-webkit-transform: scale(0);/* Safari 和 Chrome */
+  		-moz-transform: scale(0);/* Firefox */
+  		-ms-transform: scale(0);/* Internet Explorer */
+  		-o-transform: scale(0);/* Opera */
+  		transform: scale(0);
+	}
+
+	.open .burger-bottom{
+  		-webkit-transform: rotate(-45deg);/* Safari 和 Chrome */
+  		-moz-transform: rotate(-45deg);/* Firefox */
+  		-ms-transform: rotate(-45deg);/* Internet Explorer */
+  		-o-transform: rotate(-45deg);/* Opera */
+  		transform: rotate(-405deg);
+  		margin-top: -20px;
+	}
+	.open .aside{
+		display: block;
+	}
+
+}
+
 /*共同項目-表頭設定*/
 
 .header{
 	background-image: url(../images/header_desktop.png);
 	height: 420px;
 	position: relative;
+}
 
+@media (max-width: 768px) {
+	.header{
+		background-size: 100% 100%;
+	}
+}
+
+@media (max-width: 320px) {
+	.header{
+		background-image: url(../images/header_mobile.png);
+		background-size: 100% 100%;
+	}	
 }
 
 .logo{
@@ -125,6 +210,15 @@ img{
 	color: #FFFFFF;
 }
 
+@media (max-width: 320px){
+	.logo h1{
+		margin: 4%;
+	}
+	.logo ul{
+		display: none;
+	}
+}
+
 .banner{
 	width: 460px;
 	height: 152px;
@@ -133,6 +227,23 @@ img{
 	top: 123px;
 	left: 295px;
 	color: #EFE9E7;
+}
+
+@media (max-width: 768px) {
+	.banner{
+		left: 20%;
+		height: auto;
+	}
+}
+
+@media (max-width: 320px) {
+	.banner{
+		left: -19%;
+	}
+	.banner span{
+		display: block;
+		padding-bottom: 2%;
+	}
 }
 
 .banner h2{
@@ -187,6 +298,25 @@ img{
 	padding: 5px;
 }
 
+@media (max-width: 768px) {
+	.about-hex{
+		max-width: 25%;
+		margin: 0 4%;
+		padding-bottom: 5%;
+	}
+	.contact-hex{
+		max-width: 25%;
+	}
+	.hex-link img{
+		float: right;
+		margin: 0 6%;
+	}
+	.hex-link ul{
+		float: right;
+		margin: 2% 5%;
+	}
+}
+
 /*index頁-gototop按鈕*/
 
 .backtotop input{
@@ -223,11 +353,47 @@ img{
 	margin: 0 25px;
 }
 
+@media (max-width: 768px) {
+	.feature {
+		margin: 0 auto;
+	}
+	.feature li{
+		max-width: 31.33%;
+		height: auto;
+		margin: 0 1%;
+	}
+	.feature img{
+		margin: 0 10%;
+	}
+}
+
+@media (max-width: 320px) {
+	.feature{
+		float: none;
+		max-width: 100%;
+	}
+	.feature li{
+		float: none;
+	}
+}
+
+
 /*index-分隔線CODE*/
 .line{
 	width: 461px;
 	margin: 50px 282px 60px 281px;
 	border: 1px solid #979797;
+}
+
+@media (max-width: 768px) {
+	.line{
+		margin: 8% 20%;
+	}
+}
+@media (max-width: 320px) {
+	.line{
+		display: none;
+	}
 }
 
 .feature-about{
@@ -243,7 +409,19 @@ img{
 	font-size: 20px;
 	line-height: 32px;
 	font-weight: bold;
+}
 
+@media (max-width: 768px) {
+	.feature-about{
+		left: 34%;
+	}
+}
+
+@media (max-width: 320px) {
+	.feature-about{
+		top: -7%;
+		left: 15%;
+	}
 }
 
 .feature-info h3{
@@ -255,29 +433,53 @@ img{
 	text-justify: distribute; /*firefox,ie,edge */
 }
 
+@media (max-width: 768px) {
+	.feature-info h3{
+		margin: 10% 0;
+	}
+	.feature-info p{
+		text-align: left;
+		padding: 0 10%;
+	}
+}
+
+@media (max-width: 320px) {
+	.feature-info {
+		margin: 50% 10%;
+	}
+	.feature-info h3{
+		margin: 5%;
+	}
+	.feature-info p{
+		margin: 5%;
+	}
+	.feature-info li{
+		max-width: 100%;
+	}
+}
+
+
 /*index-關於廚師*/
 
 .aboutchef{
 	margin: 50px 0;
 	background-color: #3D1101;
 	height: 460px;
-	position: relative;
 }
 .aboutchef img{
 	margin: 0 42px;
+	float: left;
 }
 
 .aboutchef-info{
 	width: 400px;
-	position: absolute;
-	top: 85px;
-	left: 550px;
+	float: left;
+	margin: 80px 0;
 	color: #EFE9E7;
 }
 
 .aboutchef-info h3{
 	font-size: 20px;
-
 }
 
 .aboutchef-info span{
@@ -288,6 +490,24 @@ img{
 .aboutchef-info p{
 	margin: 16px 0;
 	line-height: 20px;
+}
+
+@media (max-width: 768px) {
+	.aboutchef{
+		margin: 5% 0;
+	}
+	.aboutchef img{
+		margin: 0 1%;
+		max-width: 100%;
+	}
+	.aboutchef-info{
+		max-width: 35%;
+		padding: 1% 0;
+		margin: 2% 0;
+	}
+	.aboutchef-info p{
+		margin: 1% 0;
+	}
 }
 
 /*index-客戶意見回饋*/
@@ -321,6 +541,15 @@ img{
 .comment span{
 	float: right;
 	padding: 16px 0;
+}
+
+@media (max-width: 768px) {
+	.comment li{
+		max-width: 33%;
+	}
+	.comment li img{
+		padding-bottom: 50%;
+	}
 }
 
 /*index主頁-訂位表單*/
@@ -359,6 +588,26 @@ img{
 	font-family: PingFangTC-Light;
 }
 
+@media (max-width: 768px) {
+	.booking{
+		margin: 5% 0;
+	}
+	.booking h3{
+		padding: 3% 0;
+	}
+	.booking img{
+		max-width: 55%;
+		margin: 0 3%;
+	}
+	.booking input{
+		width: 33%;
+		padding: 0 1%;
+	}
+	.booking label{
+		padding: 0.5%;	
+	}
+}
+
 /*index主頁-訂位表單(單選樣式)*/
 .setup {
 	display: inline-block;
@@ -376,6 +625,11 @@ img{
 	margin: 0 15px;
 }
 
+@media (max-width: 768px) {
+	.setup span{
+		margin: 10% 0;
+	}
+}
 
 /*index主頁-訂位表單(按鈕樣式)*/
 .btn input{
@@ -526,7 +780,6 @@ img{
   background: #3D1101;
   color: #fff;
   border-radius: 3px;
-  cursor: pointer;
 }
 
 /*cart頁-收尋框加上放大鏡*/
