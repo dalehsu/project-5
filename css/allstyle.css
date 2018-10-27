@@ -244,11 +244,16 @@ input{
 
 @media (max-width: 376px) {
 	.banner{
-		left: -10%;
+		width: 100%;
+		left: -1%;
 	}
 	.banner span{
 		display: block;
 		padding-bottom: 2%;
+	}
+	.banner p{
+		width: 100%;
+		padding: 0 2% !important; 
 	}
 }
 
@@ -333,6 +338,7 @@ input{
 		margin: 5% 15%;
 	}
 	.hex-link{
+		width: 100%;
 		margin: 2% 0;
 		float: right;
 	}
@@ -829,6 +835,23 @@ input{
 	background-color: #3D1101;
 }
 
+@media (max-width: 768px) {
+	.sidebar{
+		margin: 0 2%;
+	}
+}
+
+@media (max-width: 376px) {
+	.sidebar{
+		width: 80%;
+		margin: 0 auto;
+		float: none;
+	}
+	.sidebar li{
+		padding: 5% 1%; 
+	}
+}
+
 /*cart頁-收尋框*/
 
 .search {
@@ -855,6 +878,30 @@ input{
   color: #fff;
   border-radius: 3px;
 }
+
+@media (max-width: 768px) {
+	.search {
+		max-width: 80%;
+ 	 	margin: 2% auto;
+	}
+	.searchTerm{
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 376px) {
+	.search {
+  		float: none;
+ 	 	margin: 5% 12%;
+	}
+	.searchTerm {
+		width: 100%;
+	}
+	.searchButton{
+		right: -5%;
+	}
+}
+
 
 /*cart頁-收尋框加上放大鏡*/
 #magnifying-glass{
@@ -904,6 +951,10 @@ input{
     position: relative;					
 }
 
+.menu li img{
+	max-width: 100%;
+}
+
 .menu h3{
 	padding: 15px 0;
 	font-size: 20px;
@@ -918,6 +969,38 @@ input{
 	font-size: 24px;
 	font-weight: bold;
 	padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+	.menu {
+		width: 60%;
+		margin: 0 2%;
+	}
+	.menu ul{
+		margin: 0 auto;
+	}
+	.menu li{
+		margin: 5% 1%;
+	}
+}
+
+@media (max-width: 376px) {
+	.menu{
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.menu ul{
+		margin: 25% 0;
+	}
+	.menu li{
+		float: none;
+		max-width: 100%;
+		margin: 10% auto;
+	}
+	.menu li img{
+		max-width: 100%;
+	}
 }
 
 /*cart頁-菜單區中間線*/
